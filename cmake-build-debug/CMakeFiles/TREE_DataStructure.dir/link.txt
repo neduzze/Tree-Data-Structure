@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/TREE_DataStructure.dir/src/main.cpp.o  -o TREE_DataStructure 
