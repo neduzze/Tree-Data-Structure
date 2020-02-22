@@ -56,6 +56,61 @@ void Tree_DS::demo() {
     searchOutput(15);
     searchOutput(16);
     searchOutput(20);
+    findMin(rootPtr);
+    findMax(rootPtr);
+    findMin_R(rootPtr); //recursively
+    findMax_R(rootPtr); //recursively
+
+}
+
+int Tree_DS::findMin(Tree_DS::BstNode *rootPtr) {
+    if (rootPtr == nullptr) {
+        cout << "Tree is empty!\n";
+        return -1;
+    }
+    while (rootPtr->left != nullptr) {
+        rootPtr = rootPtr->left;
+    }
+    cout << "The minimum number is: " << rootPtr->data << "\n";
+    return rootPtr->data;
+}
+
+int Tree_DS::findMax(Tree_DS::BstNode *rootPtr) {
+    if (rootPtr == nullptr) {
+        cout << "Tree is empty!\n";
+        return -1;
+    }
+    while (rootPtr->right != nullptr) {
+        rootPtr = rootPtr->right;
+    }
+    cout << "The maximum number is: " << rootPtr->data << "\n";
+    return rootPtr->data;
+}
+
+int Tree_DS::findMin_R(Tree_DS::BstNode *rootPtr) {
+    if (rootPtr == nullptr) {
+        cout << "Tree is empty!\n";
+        return -1;
+    }
+        //search minimum in left subtree
+    else if (rootPtr->left == nullptr) {
+        cout << "The minimum number is: " << rootPtr->data << "\n";
+        return rootPtr->data;
+    }
+    return findMin_R(rootPtr->left);
+}
+
+int Tree_DS::findMax_R(Tree_DS::BstNode *rootPtr) {
+    if (rootPtr == nullptr) {
+        cout << "Tree is empty!\n";
+        return -1;
+    }
+        //search maximum in left subtree
+    else if (rootPtr->right == nullptr) {
+        cout << "The maximum number is: " << rootPtr->data << "\n";
+        return rootPtr->data;
+    }
+    return findMax_R(rootPtr->right);
 }
 
 

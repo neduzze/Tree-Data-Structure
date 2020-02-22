@@ -34,6 +34,16 @@ public: //methods
     //TODO: implement a print method for Binary Tree
     //TODO: implement a deletion method for Binary Tree
 
+    //finding min and max elements iteratively
+    static int findMin(BstNode *rootPtr);
+
+    static int findMax(BstNode *rootPtr);
+
+    //finding min and max elements recursively
+    static int findMin_R(BstNode *rootPtr);
+
+    static int findMax_R(BstNode *rootPtr);
+
 };
 
 
