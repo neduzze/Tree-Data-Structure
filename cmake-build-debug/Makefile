@@ -123,6 +123,33 @@ TREE_DataStructure/fast:
 	$(MAKE) -f CMakeFiles/TREE_DataStructure.dir/build.make CMakeFiles/TREE_DataStructure.dir/build
 .PHONY : TREE_DataStructure/fast
 
+src/Tree_DS.o: src/Tree_DS.cpp.o
+
+.PHONY : src/Tree_DS.o
+
+# target to build an object file
+src/Tree_DS.cpp.o:
+	$(MAKE) -f CMakeFiles/TREE_DataStructure.dir/build.make CMakeFiles/TREE_DataStructure.dir/src/Tree_DS.cpp.o
+.PHONY : src/Tree_DS.cpp.o
+
+src/Tree_DS.i: src/Tree_DS.cpp.i
+
+.PHONY : src/Tree_DS.i
+
+# target to preprocess a source file
+src/Tree_DS.cpp.i:
+	$(MAKE) -f CMakeFiles/TREE_DataStructure.dir/build.make CMakeFiles/TREE_DataStructure.dir/src/Tree_DS.cpp.i
+.PHONY : src/Tree_DS.cpp.i
+
+src/Tree_DS.s: src/Tree_DS.cpp.s
+
+.PHONY : src/Tree_DS.s
+
+# target to generate assembly for a file
+src/Tree_DS.cpp.s:
+	$(MAKE) -f CMakeFiles/TREE_DataStructure.dir/build.make CMakeFiles/TREE_DataStructure.dir/src/Tree_DS.cpp.s
+.PHONY : src/Tree_DS.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... TREE_DataStructure"
 	@echo "... edit_cache"
+	@echo "... src/Tree_DS.o"
+	@echo "... src/Tree_DS.i"
+	@echo "... src/Tree_DS.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
